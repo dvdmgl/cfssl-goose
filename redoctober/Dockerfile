@@ -4,7 +4,7 @@ ENV GOPATH /go
 
 RUN set -x \
     && apk --no-cache add git gcc libc-dev \
-    && mkdir /go/src/github.com/cloudflare \
+    && mkdir -p /go/src/github.com/cloudflare \
     && cd /go/src/github.com/cloudflare \
     && git clone https://github.com/cloudflare/redoctober.git \
     && mkdir redoctober/bin && cd redoctober/bin \
